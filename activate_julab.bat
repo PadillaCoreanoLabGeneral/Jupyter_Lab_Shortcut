@@ -24,6 +24,7 @@
 @CALL "%~dp0..\condabin\conda.bat" activate %*
 @echo off
 set /p jl_dir=Enter Directory To Open Jupyter Lab In: 
+if "%jl_dir%" equ "" set "jl_dir=C:\Users\gcmar\Desktop\GIT_REPOS\"
 @CALL jupyter lab --notebook-dir=%jl_dir%
 
 :End
